@@ -1,0 +1,36 @@
+
+class MultiplicationTable extends Thread {
+    int number;
+    public MultiplicationTable(int number) {
+        this.number = number;
+    }
+    public void run() {
+        try {
+            for (int i = 1; i <= 10; i++) {
+                System.out.println(number + " X " + i + " = " + (number * i));
+                Thread.sleep(500); // Simulate delay to observe thread lifecycle stages
+            }
+        } catch (InterruptedException e) {
+            System.out.println("Thread was interrupted.");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MultiplicationTable table5 = new MultiplicationTable(5);
+        MultiplicationTable table10 = new MultiplicationTable(10);
+        System.out.println("Threads created but not started.");
+        table5.start();
+        table10.start();
+        try {
+            table5.join();
+            table10.join();
+        } catch (InterruptedException e) {
+            System.out.println("Main thread interrupted.");
+        }
+
+     
+        System.out.println("Multiplication tables completed.");
+    }
+}

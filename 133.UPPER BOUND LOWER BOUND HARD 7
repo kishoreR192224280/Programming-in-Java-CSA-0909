@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class NumberSquareArray {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        // Get the range from the user
+        System.out.println("Enter the lower range:");
+        int lowerRange = scan.nextInt();
+
+        System.out.println("Enter the upper range:");
+        int upperRange = scan.nextInt();
+
+        // Check if the lower range is less than or equal to the upper range
+        if (lowerRange > upperRange) {
+            System.out.println("Invalid range. Lower range cannot be greater than upper range.");
+        } else {
+            // Create an array to store the number and its square
+            System.out.print("[");
+            for (int i = lowerRange; i <= upperRange; i++) {
+                int square = i * i;
+                System.out.print("(" + i + ", " + square + ")");
+                
+                // Add comma after each tuple except the last one
+                if (i != upperRange) {
+                    System.out.print(", ");
+                }
+            }
+            System.out.println("]");
+        }
+
+        // Close the scanner
+        scan.close();
+    }
+}

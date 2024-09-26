@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+class FibonacciRunnable implements Runnable {
+    int count;
+
+    // Constructor to accept the number of terms in the Fibonacci series
+    public FibonacciRunnable(int count) {
+        this.count = count;
+    }
+
+    // The run method contains the logic to generate the Fibonacci series
+    public void run() {
+        int a = 0, b = 1, next;
+        System.out.print(a + " " + b + " "); // Printing first two numbers: 0 and 1
+
+        for (int i = 2; i < count; i++) {
+            next = a + b;
+            System.out.print(next + " ");
+            a = b;
+            b = next;
+        }
+        System.out.println(); // Line break after series
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Get input from the user for the number of terms
+        System.out.println("Enter the number of terms for the Fibonacci series:");
+        int n = scanner.nextInt();
+
+        // Create a Runnable object with the specified number of terms
+        FibonacciRunnable fibonacci = new FibonacciRunnable(n);
+
+        // Create a thread and pass the Runnable object to it
+        Thread thread = new Thread(fibonacci);
+
+        // Start the thread
+        thread.start();
+
+        // Close the scanner
+        scanner.close();
+    }
+}
