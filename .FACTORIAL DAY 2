@@ -1,0 +1,17 @@
+package scanner;
+import java.util.Scanner;
+public class FACTORIAL {
+	public static void main(String args[]) {
+		int num,i,fact=1;
+		Scanner scan=new Scanner(System.in);
+		System.out.println("value of num");
+		num=scan.nextInt();
+		for(i=1;i<=num;i++)
+		{
+			fact*=i;
+		}
+		System.out.println("factorial = " +fact);
+		
+	}
+
+}

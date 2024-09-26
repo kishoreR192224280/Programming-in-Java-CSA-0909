@@ -1,0 +1,27 @@
+package JAVA;
+import java.util.Scanner;
+public class PRINCIPAL {
+	public static void main(String args[])
+	{
+		int interest,principal_amount,rate,time;
+		char citizen;
+		Scanner scan=new Scanner(System.in);
+		System.out.println("enter the values");
+		principal_amount=scan.nextInt();
+		time=scan.nextInt();
+		citizen=scan.next().charAt(0);
+		if(citizen=='s'||citizen=='S')
+		{
+			rate=12*10;
+		}
+		else
+		{
+			rate=10*10;
+		}
+		interest=principal_amount*rate*time;
+		System.out.println("interest amount = "+interest);
+		
+		
+	}
+
+}

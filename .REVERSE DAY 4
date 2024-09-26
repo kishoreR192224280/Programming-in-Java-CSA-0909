@@ -1,0 +1,22 @@
+package JAVA;
+import java.util.Scanner;
+public class REVERSE {
+	public static void main(String args[])
+	{
+		int num,rev=0,rem;
+		Scanner scan=new Scanner(System.in);
+		System.out.println("value of number");
+		num=scan.nextInt();
+		System.out.println("number = " +num);
+		while(num!=0)
+		{
+			rem=num%10;
+			rev=rev*10+rem;
+			num/=10;
+		}
+		
+		System.out.println("reversed = " +rev);
+		
+	}
+
+}

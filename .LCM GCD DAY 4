@@ -1,0 +1,26 @@
+package JAVA;
+import java.util.Scanner;
+public class GCDLCM {
+	public static void main(String args[])
+	{
+		int a,b,temp,gcd,lcm,oria,orib;
+		Scanner scan=new Scanner(System.in);
+		System.out.println("enter the value of a and b");
+		a=scan.nextInt();
+		b=scan.nextInt();
+		oria=a;
+		orib=b;
+		while(b!=0)
+		{
+			temp=b;
+			b=a%b;
+			a=temp;
+		}
+		gcd=a;
+		lcm=oria*orib/gcd;
+		
+		System.out.println("GREATEST COMMON FACTOR = " +gcd);
+		System.out.println("LOWEST COMMON FACTOR = "+ lcm);
+	}
+
+}

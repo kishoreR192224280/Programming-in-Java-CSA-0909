@@ -1,0 +1,23 @@
+package JAVA;
+import java.util.Scanner;
+public class FIBBOSUM {
+	public static void main(String args[])
+	{
+		int a=0,b=1,sum=0,n,i,next_term;
+		Scanner scan=new Scanner(System.in);
+		System.out.println("enter the values");
+		n=scan.nextInt();
+		for(i=0;i<=n*2;i++)
+		{
+			if(i%2==0)
+			{
+				sum+=i;
+			}
+			next_term=a+b;
+			a=b;
+			b=a;
+		}
+		System.out.println("sum = "+sum);
+
+}
+}

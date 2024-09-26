@@ -1,0 +1,16 @@
+package scanner;
+import java.util.Scanner;
+public class PERFECTSQUARE {
+	public static void main(String args[])
+	{
+		int num,i,sum=0,sqrt;
+		Scanner scan=new Scanner(System.in);
+		System.out.println("value of num");
+		num=scan.nextInt();
+		sqrt=(int)Math.sqrt(num);
+		if(sqrt*sqrt==num)
+		{
+			System.out.println("given number is perfect square");
+		}
+		
+}}

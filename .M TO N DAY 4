@@ -1,0 +1,19 @@
+package JAVA;
+import java.util.Scanner;
+public class SKIPPPING {
+	public static void main(String args[])
+	{
+		int m,n,k,i;
+		Scanner scan=new Scanner(System.in);
+		System.out.println("enter the values");
+		m=scan.nextInt();
+		n=scan.nextInt();
+		k=scan.nextInt();
+		for(i=m;i<=n;i+=k+1) {
+			System.out.println("numbers" +i+" ");
+			
+		}
+		
+	}
+
+}

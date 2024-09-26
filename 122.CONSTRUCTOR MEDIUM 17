@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // SuperClass behavior
+        System.out.println("Enter value for SuperClass:");
+        int superValue = scanner.nextInt();  // Input for SuperClass
+
+        // SubClass behavior
+        System.out.println("Enter value for SubClass:");
+        int subValue = scanner.nextInt();    // Input for SubClass
+
+        // Displaying the values
+        System.out.println("Value from SuperClass: " + superValue);
+        System.out.println("Value from SubClass: " + subValue);
+    }
+}
